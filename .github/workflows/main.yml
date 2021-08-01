@@ -27,7 +27,7 @@ jobs:
       run: npm i -g npm@latest
 
     - name: Run NPX
-      run: npx create-next-app
+      run: npx create-next-app ${{ secrets.APP_NAME }} --use-npm
 
     - name: Cache dependencies
       uses: actions/cache@v2
